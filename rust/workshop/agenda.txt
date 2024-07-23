@@ -1,0 +1,7 @@
+Try to implement the methods in `model.rs`!
+
+Links:
+  - Iterators:        https://doc.rust-lang.org/stable/book/ch13-02-iterators.html (ITERATORS)
+  - Iterator methods: https://doc.rust-lang.org/std/iter/trait.Iterator.html# 
+  - Traits:           https://doc.rust-lang.org/book/ch10-02-traits.html
+
