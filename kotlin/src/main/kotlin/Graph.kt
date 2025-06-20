@@ -34,6 +34,16 @@ class Graph(
     }
 
     /**
+     * Returns the node of given id
+     *
+     * Throws:
+     * NoSuchElementException - if no node with given id is found.
+     */
+    fun getNode(id: Int): Node {
+        return nodes.first { it.id == id }
+    }
+
+    /**
      * Calculates all connections to all nodes in the network
      */
     fun dijkstra(start: Node): DijkstraResult {
@@ -88,10 +98,13 @@ class Graph(
         )
     }
 
+    /**
+     * Reconstructs the full path from the start node to the given target node.
+     */
     fun reconstructFullPathFromPreviousNode(
         target: Node,
         precursors: HashMap<Node, Node?>,
-        path: ArrayDeque<Node>
+        path: ArrayDeque<Node> = ArrayDeque()
     ): List<Node> {
         val precursor = precursors[target]
         precursor?.let {
